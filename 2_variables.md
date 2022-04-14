@@ -30,8 +30,7 @@ There are some special already defined variables.
 | $@       | All arguments are double quoted (grouped as one). See below example.                                                                                                                                                                                     |
 | $*       | All the arguments are **individually** double quoted. Also see below example.                                                                                                                                                                            |
 | $?       | Exit status of last command.                                                                                                                                                                                                                             |
-| $$       | The process number of the current shell.                                                                                                                                                                                                                 |
-| $!       | The process number of the last background command.                                                                                                                                                                                                       |
+| $$       | The process number of the current shell.                                                                                                                                                                                                                 |                                                                                                                                                                                                     |
 
 ```bash
 #!/bin/bash
@@ -69,6 +68,25 @@ echo "var at index 1: ${ARR[1]}"
 # play around with IFS, see the difference
 echo "All*: ${ARR[*]}"
 echo "All@ ${ARR[@]}"
+```
+
+# Quoting vs double Quoting
+```bash
+X=variable
+
+echo "$X"            # variable     # The $ works only under double quotes
+echo '$X'            # $X
+
+echo "'$X'"          # 'variable'
+echo '"$X"'          # "$X"
+
+ARR[0]="a"
+
+echo "${ARR[0]}"      # a     # The $ works only under double quotes for arrays also
+echo '${ARR[0]}'      # ${ARR[0]}
+
+echo "`echo abcd`"    # abcd
+echo '`echo abcd`'    # `echo abcd`
 ```
 
 ## Practice

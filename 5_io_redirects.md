@@ -17,6 +17,8 @@ We can also redirect to/from other files:
 ```bash
 ps -aux > all_processes.txt
 grep root < all_processes.txt
+
+ls -a >> all_processes.txt  # >> appends to the end of the file
 ```
 The **>** redirects stdout by default. You can explicitly redirect stdout with **1>** and stderr with **2>**.
 ```bash

@@ -2,39 +2,32 @@
 
 ## General information
 
-**Duration**: 3 hours (max 1 hour theory)
+**Duration**: 3 hours
 
-**Primary teacher**: <>
+**Primary teacher**: Mircea
 
-**Secondary teacher**: <>
+**Secondary teacher**: Adrian, Maria
 
 ## Goal
-At the end of the lesson the student should 
-- be able to do basic file processing (grep, tail etc.)
-- be able to do process management
-- know how to use a pipe for output redirection
-- write a simple bash script based on previosly learned commands
-- know what Git it and understand the importance of version management
-- know how to clone a repository
-- know how to create a branch in a repository
-- know how to pull latest changes from a repository
-- know how to push changes on a branch
-- understand why git is useful in project management
+At the end of the lesson the student should: 
+- be able to write simple bash scripts
+- know what Git is, how to use it and understand the importance of version management
     
 ## Resources required/used
-Example:
-- Azure virtual machines;
-- Repos;
-- Local machine; etc
+- Red Hat Linux
 
 ## Prerequisites
-- what do the students need to have installed before the lesson
-- what do the students need to know before the lesson
+- git (```sudo yum install git```)
 
 ## Agenda
-Example:
-- 0-5 min: introduction;
-- 5-25 min: slides; etc.
+- 15 min: intro
+- 20 min: vars
+- 35 min: operators and decision-making
+- 25 min: loops
+- 25 min: io redirects
+- 15 min: functions
+- 15 min: command chaining and crontab
+- 30 min: git
 
 ## Feedback from students
 (generic survey will be setup)

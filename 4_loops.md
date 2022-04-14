@@ -41,26 +41,6 @@ do
 done
 ```
 
-### Until
-```text
-until command
-do
-   Statement(s) to be executed until command is true
-done
-```
-Example:
-```bash
-#!/bin/bash
-
-a=0
-
-until [ ! $a -lt 10 ]   # if this is true, the loop ends (notice the similarity with while)
-do
-   echo $a              # show the current value of a
-   a=`expr $a + 1`      # increment the value of a
-done
-```
-
 ## Loop control
 
 There are some mechanisms we can use to alter loop control, such as **break** and **continue** statements.

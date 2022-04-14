@@ -9,7 +9,7 @@ val=`expr 1 + 1`
 # note the spacing, `expr 1+1` does not work (it returns 1+1)
 # `expr 1 +1` and `expr 1+ 1` don't work either
 echo "Sum : $val"
-# 2
+2
 ```
 
 ## Arithmetic operators
@@ -25,6 +25,13 @@ echo "Sum : $val"
 | =        | Assignment: x = $y x takes the value of y.                                      |
 | !=       | Negated Equality: [ $x != $y ] will return false is x equals y, true otherwise. |
 
+```bash
+A=2
+B=3
+
+echo "`expr $A + $B`"    # 5
+```
+
 ## Relational operators
 
 | Operator  | Description                                                                                      | 
@@ -36,7 +43,6 @@ echo "Sum : $val"
 | -ge       | Greater than or equal to: [ $x -ge $y ] true if x holds a greater value than y or if x equals y. |
 | -le       | Lower than or equal to: [ $x -le $y ] true if x holds a lower value than y or if x equals y.     |                   
 
-
 ## Boolean operators
 
 | Operator | Description                                                | 
@@ -44,6 +50,32 @@ echo "Sum : $val"
 | !        | Logical NOT [ ! false ] is true.                           |
 | -o       | Logical OR [ $x -o $y ] is true if either x or y is true.  |
 | -a       | Logical AND [ $x -a $y ] is true if either x or y is true. |
+
+## File operators
+
+| Operator   | Description                                                                   | 
+|------------|-------------------------------------------------------------------------------|
+| -b         | Checks if file is a block special file.                                       |
+| -c         | Checks if file is a character special file.                                   |
+| -d         | Checks if file is a directory.                                                |
+| -f         | Checks if file is an ordinary file as opposed to a directory or special file. |
+| -g         | Checks if file has its set group ID (SGID) bit set.                           |
+| -k         | Checks if file has its sticky bit set.                                        |
+| -e         | Checks if file exists; is true even if file is a directory but exists.        |
+| -r         | Checks if file is readable.                                                   |
+| -w         | Checks if file is writable.                                                   |
+| -x         | Checks if file is executable.                                                 |
+| -s         | Checks if the file size is greater than 0.                                    |
+
+## String operators
+
+| Operator | Description                                                                          | 
+|----------|--------------------------------------------------------------------------------------|
+| =        | Checks if the values of two strings are equal.                                       |
+| !=       | Checks if the values of two strings are not equal.                                   |
+| -z       | Checks if the given string operand size is zero.                                     |
+| -n       | Checks if the given string operand size is non-zero.                                 |
+| str      | Checks if str is not the empty string. [ $s ] is true if s holds a non-empty string. |
 
 ## Decision-making (if, case)
 
@@ -120,3 +152,5 @@ esac
 ```
 
 ### Practice time
+
+Write a script that has three variables and outputs the one holding the greatest value.
