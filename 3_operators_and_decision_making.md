@@ -130,13 +130,15 @@ Sample script:
 ```bash
 #!/bin/bash
 
-a=10
-b=20
+A=10
+B=20
 
 # you can use all the relational operators here
-if [ $a == $b ]
+if [ $A == $B ]
 then
    echo "a is equal to b"
+else 
+   echo "a is not equal to b"
 fi
 
 WORD="a"
@@ -149,8 +151,16 @@ case "$WORD" in
    "c") echo "c" 
    ;;
 esac
+
+# create file myfile beforehand
+FILENAME=myfile
+# we can also get the filename as input from console
+# read filename
+
+if [ -c $FILENAME ]
+then
+   echo "$FILENAME is a text file"
+else
+   echo "$FILENAME is not a text file"
+fi
 ```
-
-### Practice time
-
-Write a script that has three variables and outputs the one holding the greatest value.

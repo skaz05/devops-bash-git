@@ -24,19 +24,13 @@ The **>** redirects stdout by default. You can explicitly redirect stdout with *
 ```bash
 #!/bin/bash
 
+# first line will go to stdout, second line will go to stderr
 echo "This will fail!"
 cat non-existent-file.txt
 ```
-
-### Practice
-- Redirect stdout to a file and stderr to another file.
 
 You can redirect both stdout and stderr to the same file:
 ```bash
 ./script.sh > file.txt 2>&1
 ```
 This means that stream 2 (stderr) will be redirected to the same file 1 (stdout) is redirected to.
-
-### Practice
-- use 2>&1 with the above script
-- play around with redirects

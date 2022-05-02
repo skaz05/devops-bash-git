@@ -88,7 +88,3 @@ echo '${ARR[0]}'      # ${ARR[0]}
 echo "`echo abcd`"    # abcd
 echo '`echo abcd`'    # `echo abcd`
 ```
-
-## Practice
-
-Play around with variables, special variables and arrays.

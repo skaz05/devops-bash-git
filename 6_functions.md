@@ -26,14 +26,10 @@ my_func () {
 }
 
 # Invoke your function
-my_func ladies gentleman
+my_func ladies gentlemen
 
 # Capture value returned by our function
 ret=$?
 
 echo "$ret"
 ```
-
-### Practice
-- how do we pass the first argument of a script as the first argument of a function?
-- show all the files/directories of a given directory recursively

@@ -39,6 +39,16 @@ for var in 0 1 2 3 4 5 6 7 8 9
 do
    echo $var
 done
+
+for var in `ls -a ~`
+do
+   echo $var
+done
+
+for var in `cat /etc/group`
+do
+   echo $var
+done
 ```
 
 ## Loop control
@@ -84,7 +94,3 @@ do
   
 done
 ```
-### Practice
-- greatest common denominator
-- greatest/lowest number in array
-- echo all the files/directories of ~ directory (current user home)
