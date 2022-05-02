@@ -15,6 +15,7 @@ Git is a tool for managing changes in projects on which multiple people work. We
 
 ### Practice
 - create a repo in your github account
+  - ```git config```
 - clone the repo on your machines (```git clone <repo_url>```)
 - add a new file, commit and push it
   - ```git status```
